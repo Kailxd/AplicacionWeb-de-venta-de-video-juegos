@@ -8,7 +8,7 @@ export const VIDEO_GAMES_CATALOG: VideoGame[] = [
     description: 'De la mano de Hidetaka Miyazaki y George R. R. Martin llega una nueva aventura en las Tierras Sombrías llenas de misterios, mazmorras peligrosas y nuevos jefes legendarios.',
     category: 'PS5',
     platforms: ['PS5', 'Xbox', 'PC'],
-    image: 'https://images.unsplash.com/photo-1618336753974-aae8e04506aa?q=80&w=600&auto=format&fit=crop',
+    image: 'https://www.revistagq.com/noticias/articulo/elden-ring-comprar-precio-detalles-impresiones',
     trailerUrl: 'https://www.youtube.com/embed/jentG1Cyp9s', // Embeddable official trailer
     rating: 4.9,
     developer: 'FromSoftware',
