@@ -1,0 +1,8 @@
+{
+  "name": "Game Shop León",
+  "description": "Sitio web de videojuegos para Game Shop León. Incluye catálogo de juegos, carrito de compras, trailers, inicio de sesión y registro de usuarios, y ubicación física en León.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
