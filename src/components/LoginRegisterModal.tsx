@@ -5,7 +5,15 @@
 
 import React, { useState } from 'react';
 import { User } from '../types';
-import { X, Mail, Lock, User as UserIcon, ShieldAlert, CheckCircle2 } from 'lucide-react';
+import { X, Mail, Lock, User as UserIcon, ShieldAlert, CheckCircle2, Eye, EyeOff, Check } from 'lucide-react';
+
+const PASSWORD_RULES = [
+  { id: 'length', label: 'Mínimo 8 caracteres', test: (pwd: string) => pwd.length >= 8 },
+  { id: 'uppercase', label: 'Una letra mayúscula', test: (pwd: string) => /[A-Z]/.test(pwd) },
+  { id: 'lowercase', label: 'Una letra minúscula', test: (pwd: string) => /[a-z]/.test(pwd) },
+  { id: 'number', label: 'Al menos un número', test: (pwd: string) => /[0-9]/.test(pwd) },
+  { id: 'special', label: 'Un carácter especial (ej: @, $, !, #, .)', test: (pwd: string) => /[^A-Za-z0-9]/.test(pwd) },
+];
 
 interface LoginRegisterModalProps {
   isOpen: boolean;
@@ -35,6 +43,36 @@ export default function LoginRegisterModal({
   // UI States
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+
+  // Password Visibility States
+  const [showLoginPassword, setShowLoginPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  // Password rules evaluation
+  const passedRulesCount = PASSWORD_RULES.filter(rule => rule.test(regPassword)).length;
+  
+  let strengthText = 'Muy débil';
+  let strengthColor = 'text-red-500';
+  let barColor = 'bg-red-500';
+  
+  if (regPassword.length === 0) {
+    strengthText = 'Sin ingresar';
+    strengthColor = 'text-zinc-500';
+    barColor = 'bg-zinc-800';
+  } else if (passedRulesCount <= 2) {
+    strengthText = 'Débil';
+    strengthColor = 'text-orange-500';
+    barColor = 'bg-orange-500';
+  } else if (passedRulesCount <= 4) {
+    strengthText = 'Media';
+    strengthColor = 'text-yellow-500';
+    barColor = 'bg-yellow-500';
+  } else {
+    strengthText = 'Muy segura';
+    strengthColor = 'text-emerald-500';
+    barColor = 'bg-emerald-500';
+  }
 
   if (!isOpen) return null;
 
@@ -110,15 +148,10 @@ export default function LoginRegisterModal({
       return;
     }
 
-    // 3. Password Security: Min 6 characters, at least 1 letter and 1 number
-    if (regPassword.length < 6) {
-      setError('La contraseña debe tener al menos 6 caracteres.');
-      return;
-    }
-    const hasLetter = /[a-zA-Z]/.test(regPassword);
-    const hasNumber = /[0-9]/.test(regPassword);
-    if (!hasLetter || !hasNumber) {
-      setError('La contraseña debe contener al menos una letra y un número.');
+    // 3. Password Security: Meet all password rules
+    const failedRules = PASSWORD_RULES.filter(rule => !rule.test(regPassword));
+    if (failedRules.length > 0) {
+      setError(`La contraseña debe cumplir con todos los requisitos de seguridad: ${failedRules.map(r => r.label).join(', ')}.`);
       return;
     }
 
@@ -240,13 +273,21 @@ export default function LoginRegisterModal({
               <div className="relative">
                 <Lock className="absolute left-3 top-3.5 w-5 h-5 text-zinc-500" />
                 <input
-                  type="password"
+                  type={showLoginPassword ? 'text' : 'password'}
                   value={loginPassword}
                   onChange={(e) => setLoginPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full pl-10 pr-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
+                  className="w-full pl-10 pr-12 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
                   id="login-password"
                 />
+                <button
+                  type="button"
+                  onClick={() => setShowLoginPassword(!showLoginPassword)}
+                  className="absolute right-3 top-3.5 text-zinc-500 hover:text-zinc-300 transition-colors"
+                  aria-label={showLoginPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
+                >
+                  {showLoginPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                </button>
               </div>
             </div>
 
@@ -300,28 +341,93 @@ export default function LoginRegisterModal({
               <div className="relative">
                 <Lock className="absolute left-3 top-3.5 w-5 h-5 text-zinc-500" />
                 <input
-                  type="password"
+                  type={showPassword ? 'text' : 'password'}
                   value={regPassword}
                   onChange={(e) => setRegPassword(e.target.value)}
-                  placeholder="Min. 6 caracteres"
-                  className="w-full pl-10 pr-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
+                  placeholder="Crea una contraseña segura"
+                  className="w-full pl-10 pr-12 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
                   id="register-password"
                 />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-3.5 text-zinc-500 hover:text-zinc-300 transition-colors"
+                  aria-label={showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
+                >
+                  {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                </button>
               </div>
             </div>
+
+            {/* Requisitos de la Contraseña en tiempo real */}
+            {regPassword.length > 0 && (
+              <div className="p-4 rounded-xl border border-zinc-800/85 bg-zinc-900/30 space-y-3" id="password-requirements-panel">
+                <div className="flex justify-between items-center text-xs">
+                  <span className="text-zinc-400 font-medium">Seguridad de contraseña:</span>
+                  <span className={`font-semibold tracking-wide ${strengthColor}`}>
+                    {strengthText}
+                  </span>
+                </div>
+                
+                {/* Progress bar */}
+                <div className="h-1.5 w-full bg-zinc-800 rounded-full overflow-hidden flex gap-1">
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <div
+                      key={index}
+                      className={`h-full flex-1 rounded-full transition-all duration-300 ${
+                        index < passedRulesCount ? barColor : 'bg-zinc-800'
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                {/* Requirements list */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 text-xs">
+                  {PASSWORD_RULES.map((rule) => {
+                    const isMet = rule.test(regPassword);
+                    return (
+                      <div
+                        key={rule.id}
+                        className={`flex items-center gap-2 transition-colors duration-200 ${
+                          isMet ? 'text-emerald-400' : 'text-zinc-500'
+                        }`}
+                        id={`rule-${rule.id}`}
+                      >
+                        {isMet ? (
+                          <Check className="w-4 h-4 shrink-0 text-emerald-400" />
+                        ) : (
+                          <div className="w-4 h-4 rounded-full border border-zinc-700 flex items-center justify-center shrink-0">
+                            <span className="w-1.5 h-1.5 rounded-full bg-zinc-700" />
+                          </div>
+                        )}
+                        <span className="leading-none">{rule.label}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
 
             <div className="space-y-2">
               <label className="text-xs font-mono tracking-wider text-zinc-400 uppercase">Confirmar Contraseña</label>
               <div className="relative">
                 <Lock className="absolute left-3 top-3.5 w-5 h-5 text-zinc-500" />
                 <input
-                  type="password"
+                  type={showConfirmPassword ? 'text' : 'password'}
                   value={regConfirmPassword}
                   onChange={(e) => setRegConfirmPassword(e.target.value)}
                   placeholder="Repite tu contraseña"
-                  className="w-full pl-10 pr-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
+                  className="w-full pl-10 pr-12 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
                   id="register-confirm-password"
                 />
+                <button
+                  type="button"
+                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                  className="absolute right-3 top-3.5 text-zinc-500 hover:text-zinc-300 transition-colors"
+                  aria-label={showConfirmPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
+                >
+                  {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                </button>
               </div>
             </div>
 
