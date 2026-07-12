@@ -208,7 +208,7 @@ export default function Catalog({
                     <div className="flex flex-col">
                       <span className="text-[10px] font-mono text-zinc-500 uppercase">Precio</span>
                       <span className="text-xl font-display font-extrabold text-white">
-                        {game.price.toFixed(2)}€
+                        ${game.price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
                       </span>
                     </div>
 

@@ -234,7 +234,7 @@ export default function Cart({
                           {item.selectedPlatform || item.game.category}
                         </span>
                         <h4 className="font-display font-bold text-sm text-white truncate mt-0.5">{item.game.title}</h4>
-                        <span className="text-sm text-zinc-400 font-mono">{(item.game.price * item.quantity).toFixed(2)}€</span>
+                        <span className="text-sm text-zinc-400 font-mono">${(item.game.price * item.quantity).toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</span>
                         
                         {/* Platform Selector */}
                         {item.game.platforms && item.game.platforms.length > 1 ? (
@@ -321,7 +321,7 @@ export default function Cart({
                 {cart.map(item => (
                   <div key={item.id} className="flex justify-between items-center text-xs text-zinc-300 font-mono">
                     <span className="truncate max-w-[280px]">{item.game.title} x{item.quantity}</span>
-                    <span>{(item.game.price * item.quantity).toFixed(2)}€</span>
+                    <span>${(item.game.price * item.quantity).toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</span>
                   </div>
                 ))}
               </div>
@@ -436,7 +436,7 @@ export default function Cart({
                   </>
                 ) : (
                   <>
-                    <span>Pagar {total.toFixed(2)}€</span>
+                    <span>Pagar ${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</span>
                     <ArrowRight className="w-4 h-4" />
                   </>
                 )}
@@ -471,7 +471,7 @@ export default function Cart({
                 </div>
                 <div className="flex justify-between pt-1">
                   <span className="text-zinc-500">Total Transacción:</span>
-                  <span className="text-amber-500 font-extrabold text-sm">{total.toFixed(2)}€</span>
+                  <span className="text-amber-500 font-extrabold text-sm">${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</span>
                 </div>
               </div>
 
@@ -498,11 +498,11 @@ export default function Cart({
             <div className="space-y-2 mb-4 font-mono text-xs text-zinc-400">
               <div className="flex justify-between">
                 <span>Subtotal</span>
-                <span className="text-white">{subtotal.toFixed(2)}€</span>
+                <span className="text-white">${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</span>
               </div>
               <div className="flex justify-between text-base font-display font-extrabold text-white pt-2 border-t border-zinc-900">
                 <span>Total</span>
-                <span className="text-amber-500 text-lg">{total.toFixed(2)}€</span>
+                <span className="text-amber-500 text-lg">${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</span>
               </div>
             </div>
 

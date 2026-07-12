@@ -4,7 +4,7 @@ export const VIDEO_GAMES_CATALOG: VideoGame[] = [
   {
     id: 'g1',
     title: 'Elden Ring: Shadow of the Erdtree',
-    price: 69.99,
+    price: 1499.00,
     description: 'De la mano de Hidetaka Miyazaki y George R. R. Martin llega una nueva aventura en las Tierras Sombrías llenas de misterios, mazmorras peligrosas y nuevos jefes legendarios.',
     category: 'PS5',
     platforms: ['PS5', 'Xbox', 'PC'],
@@ -19,7 +19,7 @@ export const VIDEO_GAMES_CATALOG: VideoGame[] = [
   {
     id: 'g2',
     title: 'The Legend of Zelda: Tears of the Kingdom',
-    price: 59.99,
+    price: 1299.00,
     description: 'Una aventura épica a lo largo de la tierra y los cielos de Hyrule en esta aclamada secuela. Crea tus propias armas y vehículos con el poder de la Ultramano.',
     category: 'Nintendo Switch',
     platforms: ['Nintendo Switch'],
@@ -34,7 +34,7 @@ export const VIDEO_GAMES_CATALOG: VideoGame[] = [
   {
     id: 'g3',
     title: 'Cyberpunk 2077: Ultimate Edition',
-    price: 49.99,
+    price: 999.00,
     description: 'Conviértete en V, un mercenario cyberpunk en la megalópolis de Night City. Incluye la aclamada expansión de espionaje y suspenso Phantom Liberty.',
     category: 'PC',
     platforms: ['PC', 'PS5', 'Xbox'],
@@ -49,7 +49,7 @@ export const VIDEO_GAMES_CATALOG: VideoGame[] = [
   {
     id: 'g4',
     title: 'Marvel\'s Spider-Man 2',
-    price: 79.99,
+    price: 1599.00,
     description: 'Los Spider-Men Peter Parker y Miles Morales regresan para una nueva y espectacular aventura en la que balancearse por una Nueva York ampliada y enfrentar a Venom.',
     category: 'PS5',
     platforms: ['PS5', 'PC'],
@@ -64,7 +64,7 @@ export const VIDEO_GAMES_CATALOG: VideoGame[] = [
   {
     id: 'g5',
     title: 'Red Dead Redemption 2',
-    price: 39.99,
+    price: 899.00,
     description: 'La épica historia del forajido Arthur Morgan y la banda de Van der Linde mientras huyen a través del vasto y salvaje corazón de América al final de la era del salvaje oeste.',
     category: 'Xbox',
     platforms: ['Xbox', 'PS5', 'PC'],
@@ -79,7 +79,7 @@ export const VIDEO_GAMES_CATALOG: VideoGame[] = [
   {
     id: 'g6',
     title: 'Super Mario Bros. Wonder',
-    price: 54.99,
+    price: 1199.00,
     description: 'Encuentra lo inesperado en cada esquina con la nueva Flor Maravilla que cambia el nivel de formas locas y divertivas en este clásico plataformas en 2D.',
     category: 'Nintendo Switch',
     platforms: ['Nintendo Switch'],
@@ -94,7 +94,7 @@ export const VIDEO_GAMES_CATALOG: VideoGame[] = [
   {
     id: 'g7',
     title: 'Halo Infinite: Campaign',
-    price: 29.99,
+    price: 699.00,
     description: 'Cuando toda esperanza se ha perdido y el destino de la humanidad pende de un hilo, el Jefe Maestro está listo para enfrentarse al enemigo más despiadado que jamás haya conocido.',
     category: 'Xbox',
     platforms: ['Xbox', 'PC'],
@@ -109,7 +109,7 @@ export const VIDEO_GAMES_CATALOG: VideoGame[] = [
   {
     id: 'g8',
     title: 'Hades II',
-    price: 29.99,
+    price: 599.00,
     description: 'Ábrete paso más allá del Inframundo utilizando hechicería oscura para enfrentarte al mismísimo Titán del Tiempo en esta fascinante secuela del galardonado juego de exploración de mazmorras.',
     category: 'PC',
     platforms: ['PC', 'PS5', 'Xbox'],
@@ -124,7 +124,7 @@ export const VIDEO_GAMES_CATALOG: VideoGame[] = [
   {
     id: 'g9',
     title: 'Grand Theft Auto V',
-    price: 29.99,
+    price: 499.00,
     description: 'Experimenta el aclamado juego de mundo abierto de Rockstar Games. Explora el vasto mundo de Los Santos y Blaine County en la experiencia de acción definitiva.',
     category: 'PS5',
     platforms: ['PS5', 'Xbox', 'PC'],
@@ -139,7 +139,7 @@ export const VIDEO_GAMES_CATALOG: VideoGame[] = [
   {
     id: 'g10',
     title: 'God of War Ragnarök',
-    price: 59.99,
+    price: 1299.00,
     description: 'Embárcate en un viaje épico y emotivo junto a Kratos y Atreus mientras luchan por aferrarse y soltar. Una aventura mitológica nórdica sin precedentes.',
     category: 'PS5',
     platforms: ['PS5', 'PC'],
@@ -154,7 +154,7 @@ export const VIDEO_GAMES_CATALOG: VideoGame[] = [
   {
     id: 'g11',
     title: 'EA SPORTS FC 24',
-    price: 39.99,
+    price: 799.00,
     description: 'La nueva era del juego mundial. Incluye HyperMotionV, PlayStyles optimizados por Opta y un motor Frostbite revolucionado con las ligas y torneos más grandes.',
     category: 'Xbox',
     platforms: ['PS5', 'Xbox', 'PC', 'Nintendo Switch'],
@@ -169,7 +169,7 @@ export const VIDEO_GAMES_CATALOG: VideoGame[] = [
   {
     id: 'g12',
     title: 'Resident Evil 4',
-    price: 49.99,
+    price: 1099.00,
     description: 'Sobrevivir es solo el principio. Seis años después del desastre biológico en Raccoon City, Leon S. Kennedy es enviado a rescatar a la hija del presidente en un aislado pueblo europeo.',
     category: 'PC',
     platforms: ['PS5', 'Xbox', 'PC'],
@@ -272,9 +272,9 @@ export const TRAILERS_GALLERY = [
 
 export const STORE_INFO = {
   name: 'Game Shop León',
-  address: 'Av. País Leonés, 12, 24010 León, España',
-  phone: '+34 987 123 456',
-  email: 'contacto@gameshopleon.es',
+  address: 'Plaza Carso, Lago Zurich 245, Ampliación Granada, 11529 Ciudad de México, CDMX, México',
+  phone: '554464550',
+  email: 'contacto@gameshopleon.mx',
   hours: [
     { days: 'Lunes a Viernes', time: '10:00 - 14:00 y 17:00 - 21:00' },
     { days: 'Sábados', time: '10:00 - 14:30 y 16:30 - 20:30' },
@@ -285,7 +285,7 @@ export const STORE_INFO = {
     instagram: 'https://www.instagram.com/videojuegosgame?igsh=MWhiZjMzMnV6aDYxaA=='
   },
   locationCoords: {
-    lat: 42.6074,
-    lng: -5.5898 // Approximate for Av. País Leonés, León, Spain
+    lat: 19.4407,
+    lng: -99.1774 // Plaza Carso, Ciudad de México, México
   }
 };

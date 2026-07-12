@@ -39,7 +39,7 @@ const memoryProducts = [
   {
     id_pro: 1,
     nom_pro: 'Elden Ring: Shadow of the Erdtree',
-    precio: 69.99,
+    precio: 1499.00,
     desc_pro: 'De la mano de Hidetaka Miyazaki y George R. R. Martin llega una nueva aventura en las Tierras Sombrías llenas de misterios, mazmorras peligrosas y nuevos jefes legendarios.',
     plataforma_id_pla: 1,
     platforms: ['PS5', 'Xbox', 'PC'],
@@ -55,7 +55,7 @@ const memoryProducts = [
   {
     id_pro: 2,
     nom_pro: 'The Legend of Zelda: Tears of the Kingdom',
-    precio: 59.99,
+    precio: 1299.00,
     desc_pro: 'Una aventura épica a lo largo de la tierra y los cielos de Hyrule en esta aclamada secuela. Crea tus propias armas y vehículos con el poder de la Ultramano.',
     plataforma_id_pla: 3,
     platforms: ['Nintendo Switch'],
@@ -71,7 +71,7 @@ const memoryProducts = [
   {
     id_pro: 3,
     nom_pro: 'Cyberpunk 2077: Ultimate Edition',
-    precio: 49.99,
+    precio: 999.00,
     desc_pro: 'Conviértete en V, un mercenario cyberpunk en la megalópolis de Night City. Incluye la aclamada expansión de espionaje y suspenso Phantom Liberty.',
     plataforma_id_pla: 4,
     platforms: ['PC', 'PS5', 'Xbox'],
@@ -87,7 +87,7 @@ const memoryProducts = [
   {
     id_pro: 4,
     nom_pro: 'Marvel\'s Spider-Man 2',
-    precio: 79.99,
+    precio: 1599.00,
     desc_pro: 'Los Spider-Men Peter Parker y Miles Morales regresan para una nueva y espectacular aventura en la que balancearse por una Nueva York ampliada y enfrentar a Venom.',
     plataforma_id_pla: 1,
     platforms: ['PS5', 'PC'],
@@ -103,7 +103,7 @@ const memoryProducts = [
   {
     id_pro: 5,
     nom_pro: 'Red Dead Redemption 2',
-    precio: 39.99,
+    precio: 899.00,
     desc_pro: 'La épica historia del forajido Arthur Morgan y la banda de Van der Linde mientras huyen a través del vasto y salvaje corazón de América al final de la era del salvaje oeste.',
     plataforma_id_pla: 2,
     platforms: ['Xbox', 'PS5', 'PC'],
@@ -119,7 +119,7 @@ const memoryProducts = [
   {
     id_pro: 6,
     nom_pro: 'Super Mario Bros. Wonder',
-    precio: 54.99,
+    precio: 1199.00,
     desc_pro: 'Encuentra lo inesperado en cada esquina con la nueva Flor Maravilla que cambia el nivel de formas locas y divertidas en este clásico plataformas en 2D.',
     plataforma_id_pla: 3,
     platforms: ['Nintendo Switch'],
@@ -135,7 +135,7 @@ const memoryProducts = [
   {
     id_pro: 7,
     nom_pro: 'Halo Infinite: Campaign',
-    precio: 29.99,
+    precio: 699.00,
     desc_pro: 'Cuando toda esperanza se ha perdido y el destino de la humanidad pende de un hilo, el Jefe Maestro está listo para enfrentarse al enemigo más despiadado que jamás haya conocido.',
     plataforma_id_pla: 2,
     platforms: ['Xbox', 'PC'],
@@ -151,7 +151,7 @@ const memoryProducts = [
   {
     id_pro: 8,
     nom_pro: 'Hades II',
-    precio: 29.99,
+    precio: 599.00,
     desc_pro: 'Ábrete paso más allá del Inframundo utilizando hechicería oscura para enfrentarte al mismísimo Titán del Tiempo en esta fascinante secuela del galardonado juego de exploración de mazmorras.',
     plataforma_id_pla: 4,
     platforms: ['PC', 'PS5', 'Xbox'],
@@ -167,7 +167,7 @@ const memoryProducts = [
   {
     id_pro: 9,
     nom_pro: 'Grand Theft Auto V',
-    precio: 29.99,
+    precio: 499.00,
     desc_pro: 'Experimenta el aclamado juego de mundo abierto de Rockstar Games. Explora el vasto mundo de Los Santos y Blaine County en la experiencia de acción definitiva.',
     plataforma_id_pla: 1,
     platforms: ['PS5', 'Xbox', 'PC'],
@@ -183,7 +183,7 @@ const memoryProducts = [
   {
     id_pro: 10,
     nom_pro: 'God of War Ragnarök',
-    precio: 59.99,
+    precio: 1299.00,
     desc_pro: 'Embárcate en un viaje épico y emotivo junto a Kratos y Atreus mientras luchan por aferrarse y soltar. Una aventura mitológica nórdica sin precedentes.',
     plataforma_id_pla: 1,
     platforms: ['PS5', 'PC'],
@@ -199,7 +199,7 @@ const memoryProducts = [
   {
     id_pro: 11,
     nom_pro: 'EA SPORTS FC 24',
-    precio: 39.99,
+    precio: 799.00,
     desc_pro: 'La nueva era del juego mundial. Incluye HyperMotionV, PlayStyles optimizados por Opta y un motor Frostbite revolucionado con las ligas y torneos más grandes.',
     plataforma_id_pla: 2,
     platforms: ['PS5', 'Xbox', 'PC', 'Nintendo Switch'],
@@ -215,7 +215,7 @@ const memoryProducts = [
   {
     id_pro: 12,
     nom_pro: 'Resident Evil 4',
-    precio: 49.99,
+    precio: 1099.00,
     desc_pro: 'Sobrevivir es solo el principio. Seis años después del desastre biológico en Raccoon City, Leon S. Kennedy es enviado a rescatar a la hija del presidente en un aislado pueblo europeo.',
     plataforma_id_pla: 4,
     platforms: ['PS5', 'Xbox', 'PC'],
@@ -257,7 +257,7 @@ const memoryUsers: any[] = [
 
 const memoryComments: any[] = [
   // General comments (Store reviews) - producto_id_pro: null
-  { id_comt: 1, comen: '¡Increíble servicio! El envío a domicilio en León llegó súper rápido y los precios son excelentes.', usuario_id_us: 1, producto_id_pro: null, fecha_com: new Date(), rating: 5 },
+  { id_comt: 1, comen: '¡Increíble servicio! El envío a domicilio en CDMX llegó súper rápido y los precios son excelentes.', usuario_id_us: 1, producto_id_pro: null, fecha_com: new Date(), rating: 5 },
   { id_comt: 2, comen: 'La mejor tienda de videojuegos en la zona. Tienen un stock muy variado y consolas difíciles de conseguir.', usuario_id_us: 2, producto_id_pro: null, fecha_com: new Date(), rating: 5 },
   { id_comt: 3, comen: 'Atención al cliente excepcional. Me ayudaron a elegir el regalo perfecto para mi hijo. Volveré sin duda.', usuario_id_us: 3, producto_id_pro: null, fecha_com: new Date(), rating: 5 },
   { id_comt: 4, comen: 'Me encanta el programa de fidelización y las ofertas semanales. La web es muy intuitiva y rápida.', usuario_id_us: 4, producto_id_pro: null, fecha_com: new Date(), rating: 4 },

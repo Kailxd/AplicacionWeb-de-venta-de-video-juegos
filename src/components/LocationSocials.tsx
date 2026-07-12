@@ -24,7 +24,7 @@ export default function LocationSocials() {
             Nuestra Tienda Física
           </h2>
           <p className="text-sm text-zinc-400 mt-2">
-            Ven a conocernos en León. Prueba las consolas en nuestro showroom, conversa con nuestros asesores de juegos y recoge tus compras directamente.
+            Ven a conocernos en la CDMX. Prueba las consolas en nuestro showroom, conversa con nuestros asesores de juegos y recoge tus compras directamente.
           </p>
         </div>
 
@@ -188,14 +188,14 @@ export default function LocationSocials() {
                   mapZoomed ? 'translate-x-[-120px] translate-y-[-140px] opacity-40' : 'translate-x-[-150px] translate-y-[-80px]'
                 }`}
               >
-                🏢 Centro Comercial Espacio León
+                🏢 Museo Soumaya / Plaza Carso
               </div>
               <div 
                 className={`absolute transition-all duration-500 font-mono text-[10px] text-zinc-600 ${
                   mapZoomed ? 'translate-x-[150px] translate-y-[140px] opacity-40' : 'translate-x-[100px] translate-y-[120px]'
                 }`}
               >
-                🌳 Río Bernesga
+                🌳 Bosque de Chapultepec
               </div>
 
               {/* The Game Shop Store Pin! */}
@@ -232,7 +232,7 @@ export default function LocationSocials() {
               </span>
               
               <a
-                href="https://maps.google.com/?q=Av.+País+Leonés,+12,+24010+León,+España"
+                href="https://maps.google.com/?q=Plaza+Carso,+Lago+Zurich+245,+Ampliación+Granada,+11529+Ciudad+de+México,+CDMX,+México"
                 target="_blank"
                 rel="noreferrer"
                 className="px-4 py-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 text-white rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer"

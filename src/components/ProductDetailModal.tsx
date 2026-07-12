@@ -228,7 +228,7 @@ export default function ProductDetailModal({
               <div className="flex flex-col">
                 <span className="text-xs font-mono text-zinc-500 uppercase">Precio</span>
                 <span className="text-2xl sm:text-3xl font-display font-extrabold text-white">
-                  {game.price.toFixed(2)}€
+                  ${game.price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
                 </span>
                 <span className={`text-[10px] font-mono mt-0.5 ${game.stock <= 5 ? 'text-amber-500' : 'text-zinc-500'}`}>
                   Stock: {game.stock} unidades

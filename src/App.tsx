@@ -235,11 +235,11 @@ export default function App() {
                 GAME SHOP <span className="text-orange-500">LEÓN</span>
               </span>
               <p className="text-xs text-slate-500 leading-relaxed font-mono">
-                La guarida definitiva para coleccionistas, competidores y entusiastas del entretenimiento digital en León, España.
+                La guarida definitiva para coleccionistas, competidores y entusiastas del entretenimiento digital en CDMX, México.
               </p>
               <div className="flex items-center gap-2 text-[10px] text-slate-600 font-mono">
                 <Globe className="w-3.5 h-3.5 text-orange-500" />
-                <span>Made in Spain | © 2026</span>
+                <span>Made in Mexico | © 2026</span>
               </div>
             </div>
 
@@ -280,7 +280,7 @@ export default function App() {
           </div>
 
           <div className="mt-8 pt-8 border-t border-slate-900/60 text-center text-[10px] text-slate-600 font-mono">
-            <span>© 2026 Game Shop León S.L. Todos los derechos reservados. Las marcas registradas de consolas pertenecen a sus respectivos fabricantes.</span>
+            <span>© 2026 Game Shop León S.A. de C.V. Todos los derechos reservados. Las marcas registradas de consolas pertenecen a sus respectivos fabricantes.</span>
           </div>
         </div>
       </footer>

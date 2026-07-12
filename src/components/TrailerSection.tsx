@@ -94,7 +94,7 @@ export default function TrailerSection({
               
               {matchingGame && (
                 <div className="flex items-center gap-3 shrink-0">
-                  <span className="text-sm font-mono text-zinc-400">Desde: <strong className="text-white font-display text-base font-bold">{matchingGame.price.toFixed(2)}€</strong></span>
+                  <span className="text-sm font-mono text-zinc-400">Desde: <strong className="text-white font-display text-base font-bold">${matchingGame.price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</strong></span>
                   {currentUser ? (
                     <button
                       onClick={() => onBuyNow(matchingGame)}

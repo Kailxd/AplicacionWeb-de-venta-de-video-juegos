@@ -45,7 +45,7 @@ export default function Hero() {
             {/* Animated Brand Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-xs font-semibold uppercase tracking-widest animate-pulse" id="hero-badge">
               <Sparkles className="w-4 h-4" />
-              <span>Tienda Oficial León, España</span>
+              <span>Tienda Oficial CDMX, México</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-extrabold text-white tracking-tight leading-none" id="hero-title">
@@ -75,7 +75,7 @@ export default function Hero() {
                 id="btn-hero-location"
               >
                 <Navigation className="w-4 h-4 text-amber-500" />
-                <span>Visítanos en León</span>
+                <span>Visítanos en CDMX</span>
               </button>
             </div>
 

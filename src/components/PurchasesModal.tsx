@@ -94,7 +94,7 @@ export default function PurchasesModal({
                             </span>
                           )}
                         </div>
-                        <span>{(item.price * item.quantity).toFixed(2)}€</span>
+                        <span>${(item.price * item.quantity).toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</span>
                       </div>
                     ))}
                   </div>
@@ -102,7 +102,7 @@ export default function PurchasesModal({
                   {/* Pricing Footer */}
                   <div className="flex justify-between items-center pt-3 border-t border-zinc-900 text-xs font-mono">
                     <span className="text-zinc-500">Tarjeta: <strong className="text-zinc-300">{purchase.cardNumber}</strong></span>
-                    <span className="text-sm font-display font-extrabold text-amber-500">Pagado: {purchase.total.toFixed(2)}€</span>
+                    <span className="text-sm font-display font-extrabold text-amber-500">Pagado: ${purchase.total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</span>
                   </div>
 
                 </div>

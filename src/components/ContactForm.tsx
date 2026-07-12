@@ -32,7 +32,7 @@ export default function ContactForm() {
       id: 'c2',
       userName: 'Lucía Fernández',
       email: 'lucia.fer@gmail.com',
-      message: 'Fui a recoger mi preventa de Zelda TotK en la tienda física de Av. País Leonés. El showroom es espectacular y la atención de los chicos es impecable.',
+      message: 'Fui a recoger mi preventa de Zelda TotK en la tienda física de Plaza Carso. El showroom es espectacular y la atención de los chicos es impecable.',
       rating: 5,
       date: '08/07/2026'
     },
@@ -40,7 +40,7 @@ export default function ContactForm() {
       id: 'c3',
       userName: 'Mario Gamer',
       email: 'mario.gamer@hotmail.com',
-      message: 'Buena variedad de juegos para Nintendo Switch, y los precios son muy competitivos para ser tienda física en León. Sin duda volveré a comprar.',
+      message: 'Buena variedad de juegos para Nintendo Switch, y los precios son muy competitivos para ser tienda física en CDMX. Sin duda volveré a comprar.',
       rating: 4,
       date: '05/07/2026'
     }
